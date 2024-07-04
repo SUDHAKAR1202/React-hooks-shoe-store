@@ -1,0 +1,13 @@
+/* src/App.css */
+.App {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}

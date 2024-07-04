@@ -1,0 +1,19 @@
+/* src/Cart.css */
+.cart {
+    width: 40%;
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-item h3 {
+    margin: 0;
+  }
+  

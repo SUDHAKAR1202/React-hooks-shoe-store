@@ -1,0 +1,19 @@
+/* src/ShoeList.css */
+.shoe-list {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .shoe-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .shoe-item img {
+    width: 100px;
+    height: 100px;
+  }
+  
