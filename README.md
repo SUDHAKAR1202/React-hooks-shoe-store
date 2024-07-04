@@ -65,6 +65,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
+Steps to deploy react project in netlify:
+1) Enter npm run build in the terminal which will generate build folder in the project.
+2) Install netlify globally by giving command npm install netlify -cli - g
+3) Then give netlify deploy after getting authorized and setting path as ./build ..the project will get deployed into netlify successfully.
+
+   Deployed link: https://668432bb5d2cf6b90a95fc5c--silver-brigadeiros-c588cc.netlify.app/
+
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
