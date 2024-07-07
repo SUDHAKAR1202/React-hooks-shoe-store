@@ -70,7 +70,7 @@ Steps to deploy react project in netlify:
 2) Install netlify globally by giving command npm install netlify -cli - g
 3) Then give netlify deploy after getting authorized and setting path as ./build ..the project will get deployed into netlify successfully.
 
-   Deployed link: https://668432bb5d2cf6b90a95fc5c--silver-brigadeiros-c588cc.netlify.app/
+   Deployed link: https://668a95e47957cde607413f62--silver-brigadeiros-c588cc.netlify.app/
 
 ### `npm run build` fails to minify
 
