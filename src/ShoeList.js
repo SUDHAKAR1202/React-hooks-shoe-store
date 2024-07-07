@@ -4,6 +4,7 @@ import './ShoeList.css';
 
 const ShoeList = ({ shoes, addToCart }) => {
   return (
+    <div className='shoe-list-container'>
     <div className="shoe-list">
       {shoes.map(shoe => (
         <div key={shoe.id} className="shoe-item">
@@ -13,6 +14,7 @@ const ShoeList = ({ shoes, addToCart }) => {
           <button onClick={() => addToCart(shoe)}>Add to Cart</button>
         </div>
       ))}
+    </div>
     </div>
   );
 };

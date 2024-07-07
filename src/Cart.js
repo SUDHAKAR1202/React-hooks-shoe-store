@@ -1,7 +1,7 @@
 import React from "react";
 import './Cart.css';
 
-const Cart = ({ cart, removeFromCart}) => {
+const Cart = ({ cart, incrementQuantity, decrementQuantity }) => {
     const getTotal = () => {
         return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     };
@@ -17,7 +17,12 @@ const Cart = ({ cart, removeFromCart}) => {
                 <div key={item.id} className="cart-item">
                     <h3>{item.name}</h3>
                     <p>${item.price} x {item.quantity}</p>
-                    <button onClick={() => removeFromCart(item)}>Remove</button>
+                    <div className="quantity-controls">
+                        <button onClick={() => decrementQuantity(item)}>-</button>
+                        <span>{item.quantity}</span>
+                        <button onClick={() => incrementQuantity(item)}>+</button>
+                        </div>
+                    <button onClick={() =>  decrementQuantity(item)}>Remove</button>
                     </div>
             ))}
             <h3>Total: ${getTotal()}</h3>
