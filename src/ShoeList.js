@@ -1,8 +1,10 @@
 // src/ShoeList.js
 import React from 'react';
+import { useCart } from './context/CartContext';
 import './ShoeList.css';
 
-const ShoeList = ({ shoes, addToCart }) => {
+const ShoeList = ({ shoes }) => {
+  const { addToCart } = useCart();
   return (
     <div className='shoe-list-container'>
     <div className="shoe-list">

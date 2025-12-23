@@ -1,18 +1,17 @@
 import React from "react";
+import { useCart } from "./context/CartContext";
+import { useNavigate } from "react-router-dom";
 import './Cart.css';
 
-const Cart = ({ cart, incrementQuantity, decrementQuantity }) => {
-    const getTotal = () => {
-        return cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
-    };
+const Cart = () => {
+const { cart, incrementQuantity, decrementQuantity, total } = useCart();
+const navigate = useNavigate();
+   
 
     return (
      <div className="cart">
         <h2>Shopping Cart</h2>
-        {cart.length === 0 ? (
-            <p>Your cart is empty</p>
-        ) : (
-          <div>
+
             {cart.map(item => (
                 <div key={item.id} className="cart-item">
                     <h3>{item.name}</h3>
@@ -25,12 +24,14 @@ const Cart = ({ cart, incrementQuantity, decrementQuantity }) => {
                     <button onClick={() =>  decrementQuantity(item)}>Remove</button>
                     </div>
             ))}
-            <h3>Total: ${getTotal()}</h3>
-            </div>
-        )}
+            <h3>Total: ${total}</h3>
+            {cart.length > 0 && (
+                <button onClick={() => navigate("/payment")}>
+                    Proceed to Payment
+                </button>
+            )}
 
      </div>
     )
 }
-
 export default Cart;
